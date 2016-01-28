@@ -1,2 +1,24 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>
+  {{desc}}
+</p>
+
+<section id='post-survey-sect'>
+  <label for="">Name</label>
+  <input type="text" id='name' value="" placeholder='Benedict Bumberlatch' class="reset">
+  <label for="">Gender</label>
+  <input type="text" id='gender' value="" placeholder='Genderfluid' class="reset">
+  <label for="">What software do you use to track todo tasks?</label>
+  <input type="text" id='software' value="" placeholder='Chowmein Checker' class="reset">
+  <label for="">Any other software?</label>
+  <input type="text" id='other' value="" placeholder='Taskrrr, google notes' class="reset">
+  <label for="">What features do you love about the program?</label>
+  <input type="text" id='loveFeats' value="" placeholder='The buttons' class="reset">
+  <label for="">What do you wish for?</label>
+  <input type="text" id='wishFeats' value="" placeholder='I hate rounded buttons' class="reset">
+  <button type="button" id='post-survey'>Post Survery</button>
+  <div class='error'></div>
+</section>
+
+<script src='/javascripts/app.js'></script>
+<script src='/javascripts/events.js'></script>

@@ -2,9 +2,9 @@ var mongoose = require('mongoose');
 
 
 var surveySchema = new mongoose.Schema({
-    age: Number,
+    name: String,
     gender: String,
-    software: String, //string for now
+    software: String,
     other: String,
     loveFeats: String,
     wishFeats: String
