@@ -6,7 +6,7 @@ function errMsg(err) {
   return {
     message: err,
     status: 500,
-    note: 'This response was generated due to user error.'
+    note: 'User error.'
   };
 };
 

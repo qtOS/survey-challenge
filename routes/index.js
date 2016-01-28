@@ -6,7 +6,7 @@ indexData = {
   desc: 'Some survey questions figuring out what you like to use!'
 }
 
-/* GET home page. */
+//landing page
 router.get('/', function(req, res, next) {
   res.render('index', indexData);
 });

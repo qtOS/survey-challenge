@@ -29,7 +29,9 @@ Backbone.Model.idAttribute = "_id";
 
 $(document).ready(function(){
   active.collection = new app.Collection();
+  console.log('collection made');
   active.createSurveyView = new app.postSurveyView({
     collection: active.collection
   });
+  console.log('collection active');
 });

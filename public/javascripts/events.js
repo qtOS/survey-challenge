@@ -6,13 +6,17 @@ app.postSurveyView = Backbone.View.extend({
   initialize: function() {
     this.$el.children('button').hide();
   },
+  //onclick trigger events runs postSurvey and validation functions--- backbone
   events: {
     'click button': 'postSurvey',
     'blur input': 'validateInput'
   },
+  //send survey data
   postSurvey: function() {
+    //sets confirmation message to ensure user is ready
     var confirmation = confirm('Ready to save?');
     if (confirmation) {
+      //data object intaking the input values
       var data = {
         name: $('#name').val(),
         gender: $('#gender').val(),
@@ -21,16 +25,18 @@ app.postSurveyView = Backbone.View.extend({
         loveFeats: $('#loveFeats').val(),
         wishFeats: $('#wishFeats').val()
       }
+      //clear class grab
       var clear  = $('.reset');
       this.collection.create(data);
+      //clear in action
       clear.val('');
     }
   },
   validateInput: function() {
+    //grabs all inputs
     var allInputs = this.$el.children('input');
-    console.log(allInputs);
     var validVals = 0;
-
+    //checks the input values when activated
     for (var i = 0; i < allInputs.length; i++) {
       var selector = $(allInputs)[i];
       //console.log(selector);
@@ -39,6 +45,8 @@ app.postSurveyView = Backbone.View.extend({
         validVals++;
       }
     }
+    console.log(validVals);
+
 
     if (validVals != allInputs.length) {
       this.$el.children('button').hide();
@@ -52,6 +60,7 @@ app.postSurveyView = Backbone.View.extend({
 
 app.CollectionView = Backbone.View.extend({
   initialize: function() {
+    console.log('CollectionView launched.')
   },
   render: function() {
     console.log('CollectionView is rendering.');

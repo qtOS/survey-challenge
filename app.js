@@ -26,7 +26,7 @@ app.use('/', routes);
 app.use('/api', surveys);
 
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('404: cannot find resource');
   err.status = 404;
   next(err);
 });
